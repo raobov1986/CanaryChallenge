@@ -1,0 +1,62 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".contentefragment.SupportFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal|top">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/name_editText"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="20dp"
+            android:width="150dp"
+            android:hint="Name"
+            android:singleLine="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:ems="10"
+            android:id="@+id/phonenumber_editText"
+            android:layout_alignBottom="@+id/name_editText"
+            android:layout_toRightOf="@+id/name_editText"
+            android:layout_toEndOf="@+id/name_editText"
+            android:layout_marginLeft="10dp"
+            android:hint="Phone Number" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/description_editText"
+            android:layout_below="@+id/name_editText"
+            android:layout_alignLeft="@+id/name_editText"
+            android:layout_alignStart="@+id/name_editText"
+            android:layout_marginTop="50dp"
+            android:layout_alignRight="@+id/phonenumber_editText"
+            android:layout_alignEnd="@+id/phonenumber_editText"
+            android:hint="    Description"
+            android:singleLine="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:id="@+id/submit_button"
+            android:layout_below="@+id/description_editText"
+            android:layout_alignLeft="@+id/description_editText"
+            android:layout_alignStart="@+id/description_editText" />
+
+    </RelativeLayout>
+</FrameLayout>
