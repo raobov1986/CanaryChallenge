@@ -13,7 +13,7 @@
         <item
             android:id="@+id/fiftenmile"
 
-            android:title="50 mi" />
+            android:title="50 mile" />
         <item
             android:id="@+id/sevenmile"
 

@@ -129,7 +129,7 @@ public class HundmileFragment extends Fragment implements OnMapReadyCallback,
         }
         mMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(37.440649, -122.235912)));
         mMap.animateCamera(CameraUpdateFactory.zoomTo(10));
-        showentire();
+        showhounderdmile();
 
     }
 
@@ -390,7 +390,251 @@ public class HundmileFragment extends Fragment implements OnMapReadyCallback,
 
     }
 
+    public  void showhounderdmile(){
 
+
+        mMap.addMarker(new MarkerOptions().position(new LatLng( 37.413153, -122.143819)).title("Finish"));
+        mMap.addMarker(new MarkerOptions().position(new LatLng( 37.412181, -122.144594)).title("Start"));
+        mMap.addMarker(new MarkerOptions().position(new LatLng( 37.424973, -122.313846)).title("Reset Stop"));
+        mMap.addMarker(new MarkerOptions().position(new LatLng( 37.369439, -122.383567)).title("Reset Stop"));
+        mMap.addMarker(new MarkerOptions().position(new LatLng( 37.503070, -122.335789)).title("Reset Stop"));
+        mMap.addMarker(new MarkerOptions().position(new LatLng( 37.255954, -122.378421)).title("Reset Stop"));
+        lineOptions = new PolylineOptions();
+        lineOptions.color(Color.rgb(255,51,255));
+        mMap.addPolyline(lineOptions);
+
+
+        LatLng startmark=new LatLng( 37.412181, -122.144594);
+        LatLng secondmark=new LatLng(37.409484, -122.160053);
+        DrawArrowHead(mMap, secondmark,startmark );
+        LatLng thirdmark=new LatLng(37.448335, -122.230864);
+        LatLng four_mark=new LatLng(37.448256, -122.231913);
+        DrawArrowHead(mMap, four_mark,thirdmark );
+        LatLng fif_mark=new LatLng(37.435498, -122.259658);
+        LatLng six_mark=new LatLng(37.503070, -122.335789);
+        DrawArrowHead(mMap, six_mark,fif_mark );
+        LatLng seven_mark=new LatLng(37.474200, -122.307152);
+        LatLng seven_mark_temp=new LatLng(37.454061, -122.283613);
+        LatLng mark_8=new LatLng(37.428544, -122.257860);//
+        DrawArrowHead(mMap, mark_8,seven_mark );
+        LatLng mark_14=new LatLng(37.424973, -122.313846);
+        LatLng mark_15=new LatLng(37.369439, -122.383567);
+        LatLng mark_16=new LatLng(37.166761, -122.360582);
+        DrawArrowHead(mMap, mark_16,mark_15 );
+        LatLng mark_20=new LatLng(37.212376, -122.349397);
+        LatLng mark_21=new LatLng(37.254976, -122.369248);
+        DrawArrowHead(mMap, mark_21,mark_20 );
+        LatLng mark_22=new LatLng(37.255954, -122.378421);
+        LatLng mark_23=new LatLng(37.260961, -122.384495);
+        DrawArrowHead(mMap, mark_23,mark_22 );
+        LatLng mark_24=new LatLng(37.289810, -122.380217);
+        LatLng mark_25=new LatLng(37.303478, -122.384158);
+        DrawArrowHead(mMap, mark_25,mark_24 );
+        LatLng mark_26=new LatLng(37.319642, -122.388873);
+        LatLng mark_17=new LatLng(37.345418, -122.271906);
+        DrawArrowHead(mMap, mark_17,mark_26 );
+        LatLng mark_18=new LatLng(37.387644, -122.266154);
+        LatLng mark_19=new LatLng(37.424958, -122.313784);
+        LatLng mark_30=new LatLng(37.427681, -122.303919);
+        DrawArrowHead(mMap, mark_19,mark_18 );
+        LatLng mark_9=new LatLng(37.404318, -122.249009);//
+        LatLng mark_10=new LatLng(37.372308, -122.208962);
+        DrawArrowHead(mMap, mark_10,mark_9 );
+        LatLng mark_11=new LatLng(37.424475, -122.191655);
+        LatLng mark_12=new LatLng(37.417156, -122.146884);
+        LatLng mark_13=new LatLng(37.413153, -122.143819);//update start
+
+// draw ruote by each position
+        String url = getUrl(startmark, secondmark);
+        FetchUrl FetchUrl = new FetchUrl();
+
+        // Start downloading json data from Google Directions API
+        FetchUrl.execute(url);
+//
+//
+//
+        String url_1 = getUrl(secondmark, thirdmark);
+        Log.d("onMapClick", url.toString());
+        FetchUrl FetchUrl_1 = new FetchUrl();
+
+        // Start downloading json data from Google Directions API
+        FetchUrl_1.execute(url_1);
+
+        String url_2 = getUrl(thirdmark,four_mark );
+        Log.d("onMapClick", url.toString());
+        FetchUrl FetchUrl_2 = new FetchUrl();
+
+        // Start downloading json data from Google Directions API
+        FetchUrl_2.execute(url_2);
+
+
+        String url_3 = getUrl(four_mark,fif_mark );
+        FetchUrl FetchUrl_3 = new FetchUrl();
+
+        // Start downloading json data from Google Directions API
+        FetchUrl_3.execute(url_3);
+
+        String url_4 = getUrl(fif_mark,six_mark );
+        FetchUrl FetchUrl_4 = new FetchUrl();
+
+        // Start downloading json data from Google Directions API
+        FetchUrl_4.execute(url_4);
+
+        String url_5 = getUrl(six_mark,seven_mark );
+        FetchUrl FetchUrl_5 = new FetchUrl();
+
+        // Start downloading json data from Google Directions API
+        FetchUrl_5.execute(url_5);
+
+
+
+        String url_6 = getUrl(seven_mark, seven_mark_temp);
+        FetchUrl FetchUrl_6 = new FetchUrl();
+
+        // Start downloading json data from Google Directions API
+        FetchUrl_6.execute(url_6);
+
+
+        String url_26 = getUrl(seven_mark_temp, mark_8);
+        FetchUrl FetchUrl_26 = new FetchUrl();
+
+        // Start downloading json data from Google Directions API
+        FetchUrl_26.execute(url_26);
+
+
+        String url_11 = getUrl(mark_8,mark_14 );
+        FetchUrl FetchUrl_11= new FetchUrl();
+
+        // Start downloading json data from Google Directions API
+        FetchUrl_11.execute(url_11);
+
+        String url_12 = getUrl(mark_14,mark_15 );
+        FetchUrl FetchUrl_12= new FetchUrl();
+
+        // Start downloading json data from Google Directions API
+        FetchUrl_12.execute(url_12);
+
+        String url_13 = getUrl(mark_15,mark_16 );
+        FetchUrl FetchUrl_13= new FetchUrl();
+
+        // Start downloading json data from Google Directions API
+        FetchUrl_13.execute(url_13);
+
+        String url_18 = getUrl(mark_16,mark_20 );
+        FetchUrl FetchUrl_18= new FetchUrl();
+
+        // Start downloading json data from Google Directions API
+        FetchUrl_18.execute(url_18);
+        String url_19 = getUrl(mark_20,mark_21 );
+        FetchUrl FetchUrl_19= new FetchUrl();
+
+        // Start downloading json data from Google Directions API
+        FetchUrl_19.execute(url_19);
+
+        String url_20 = getUrl(mark_21,mark_22 );
+        FetchUrl FetchUrl_20= new FetchUrl();
+
+        // Start downloading json data from Google Directions API
+        FetchUrl_20.execute(url_20);
+
+
+        String url_21 = getUrl(mark_22,mark_23 );
+        FetchUrl FetchUrl_21= new FetchUrl();
+
+        // Start downloading json data from Google Directions API
+        FetchUrl_21.execute(url_21);
+
+
+        String url_22 = getUrl(mark_23,mark_24 );
+        FetchUrl FetchUrl_22= new FetchUrl();
+
+        // Start downloading json data from Google Directions API
+        FetchUrl_22.execute(url_22);
+
+
+        String url_23 = getUrl(mark_24,mark_25 );
+        FetchUrl FetchUrl_23= new FetchUrl();
+
+        // Start downloading json data from Google Directions API
+        FetchUrl_23.execute(url_23);
+
+        String url_24 = getUrl(mark_25,mark_26 );
+        FetchUrl FetchUrl_24= new FetchUrl();
+
+        // Start downloading json data from Google Directions API
+        FetchUrl_24.execute(url_24);
+
+        String url_14= getUrl(mark_26,mark_17 );
+        FetchUrl FetchUrl_14= new FetchUrl();
+
+        // Start downloading json data from Google Directions API
+        FetchUrl_14.execute(url_14);
+
+
+
+
+        String url_15= getUrl(mark_17,mark_18 );
+        FetchUrl FetchUrl_15= new FetchUrl();
+
+        // Start downloading json data from Google Directions API
+        FetchUrl_15.execute(url_15);
+
+        String url_16= getUrl(mark_18,mark_19 );
+        FetchUrl FetchUrl_16= new FetchUrl();
+
+        // Start downloading json data from Google Directions API
+        FetchUrl_16.execute(url_16);
+
+
+        String url_30= getUrl(mark_19,mark_30 );
+        FetchUrl FetchUrl_30= new FetchUrl();
+
+        // Start downloading json data from Google Directions API
+        FetchUrl_30.execute(url_30);
+
+        String url_31= getUrl(mark_30,mark_8 );
+        FetchUrl FetchUrl_31= new FetchUrl();
+
+        // Start downloading json data from Google Directions API
+        FetchUrl_31.execute(url_31);
+
+        String url_7 = getUrl(mark_8, mark_9);
+        FetchUrl FetchUrl_7 = new FetchUrl();
+
+        // Start downloading json data from Google Directions API
+        FetchUrl_7.execute(url_7);
+
+        String url_8 = getUrl(mark_9, mark_10);
+        FetchUrl FetchUrl_8= new FetchUrl();
+
+        // Start downloading json data from Google Directions API
+        FetchUrl_8.execute(url_8);
+
+        String url_9 = getUrl(mark_10,mark_11 );
+        FetchUrl FetchUrl_9= new FetchUrl();
+
+        // Start downloading json data from Google Directions API
+        FetchUrl_9.execute(url_9);
+
+        String url_10 = getUrl(mark_11,mark_12 );
+        FetchUrl FetchUrl_10= new FetchUrl();
+
+        // Start downloading json data from Google Directions API
+        FetchUrl_10.execute(url_10);
+
+
+
+        String url_17 = getUrl(mark_12,mark_13 );
+        FetchUrl FetchUrl_17= new FetchUrl();
+
+        // Start downloading json data from Google Directions API
+        FetchUrl_17.execute(url_17);
+
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(37.440649, -122.235912)));
+        mMap.animateCamera(CameraUpdateFactory.zoomTo(10));
+
+
+    }
     private static final double degreesPerRadian = 180.0 / Math.PI;
 
     public  void DrawArrowHead(GoogleMap mMap, LatLng from, LatLng to){

@@ -156,8 +156,8 @@ public class SevenmileFragment extends Fragment implements OnMapReadyCallback,
         mMap.addMarker(new MarkerOptions().position(new LatLng( 37.413153, -122.143819)).title("Finish"));
         mMap.addMarker(new MarkerOptions().position(new LatLng( 37.412181, -122.144594)).title("Start"));
         mMap.addMarker(new MarkerOptions().position(new LatLng( 37.424973, -122.313846)).title("Reset Stop"));
-        mMap.addMarker(new MarkerOptions().position(new LatLng( 37.369439, -122.383567)).title("Reset Stop"));
-        mMap.addMarker(new MarkerOptions().position(new LatLng( 37.503070, -122.335789)).title("Reset Stop"));
+       // mMap.addMarker(new MarkerOptions().position(new LatLng( 37.369439, -122.383567)).title("Reset Stop"));
+//        mMap.addMarker(new MarkerOptions().position(new LatLng( 37.503070, -122.335789)).title("Reset Stop"));
         lineOptions = new PolylineOptions();
         lineOptions.color(Color.rgb(0,0,255));
         LatLng startmark=new LatLng( 37.412181, -122.144594);
@@ -175,15 +175,15 @@ public class SevenmileFragment extends Fragment implements OnMapReadyCallback,
 
         LatLng mark_8_temp=new LatLng(37.429484, -122.271554);//
         DrawArrowHead(mMap, mark_8,seven_mark );
-        LatLng mark_14=new LatLng(37.424973, -122.313846);
-        LatLng mark_15=new LatLng(37.369439, -122.383567);
+        LatLng mark_14=new LatLng(37.424973, -122.313846);//
+        LatLng mark_15=new LatLng(37.417772, -122.318974);
         DrawArrowHead(mMap, mark_15,mark_14 );
-        LatLng mark_16=new LatLng(37.331190, -122.389575);
-        LatLng mark_17=new LatLng(37.345418, -122.271906);
+        LatLng mark_16=new LatLng(37.407483, -122.307119);
+        LatLng mark_17=new LatLng(37.387599, -122.266096);
         DrawArrowHead(mMap, mark_17,mark_16 );
-        LatLng mark_18=new LatLng(37.387644, -122.266154);
-        LatLng mark_19=new LatLng(37.424958, -122.313784);
-        LatLng mark_20=new LatLng(37.427681, -122.303919);
+        LatLng mark_18=new LatLng(37.387436, -122.265871);
+        LatLng mark_19=new LatLng(37.386147, -122.263430);
+        LatLng mark_20=new LatLng(37.397373, -122.256773);
         LatLng mark_9=new LatLng(37.404318, -122.249009);//
         LatLng mark_10=new LatLng(37.372308, -122.208962);
         DrawArrowHead(mMap, mark_10,mark_9 );
