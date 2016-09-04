@@ -27,7 +27,7 @@ import android.view.MenuItem;
 import android.widget.Toast;
 import android.Manifest;
 
-import com.gari.canarychallenge.Utilities.GPSTracker;
+
 import com.gari.canarychallenge.contentefragment.FiftenkioFragment;
 import com.gari.canarychallenge.contentefragment.FiftenmileFragment;
 import com.gari.canarychallenge.contentefragment.HundmileFragment;

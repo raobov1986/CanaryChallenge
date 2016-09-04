@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">Canary</string>
+    <string name="app_name">Canary Challenge 2016</string>
     <string name="title_activity_maps">Canary</string>
-    <string name="app_id">Canary</string>
-    <string name="title_activity_select">SelectActivity</string>
+    <string name="app_id">Canary Challenge 2016</string>
+    <string name="title_activity_select">Canary Challenge 2016</string>
     <string name="fivekiro"><![CDATA[<br><br><br><br><p><b>0.0</b> START/FINISH ARCH</p><br><p><b>0.0</b> Turn left on Hanover Street</p><br><p><b>0.1</b> Turn right onto Bol Park Bike Path</p><br><p>Continue on Bol Park Bike Path to Arastradero Road</p><br><br><p><b>0.1</b>REST STOP AT CORNER OF ARASTRADERO AND</p><br><p>BOL PARK BIKE PATH</p><br><p>Cross Foothill Expressway *CAUTION – BUSY</p><br><p>INTERSECTION*</p><br><p><b>1.9</b> Turn right onto Hillview Ave</p><br><p><b>2.6</b> Cross Foothill Expressway at Hillview Ave</p><br><p>*CAUTION – BUSY INTERSECTION*</p><br><p><b>3.0</b> Turn right onto Hanover Street</p><p><b>3.0</b>Turn right onto Hanover Street</p><br><p>Turn left into HP parking lot</p><br><p>START/FINISH ARCH</p><br>]]></string>
     <string name="fiftenkiro"><![CDATA[<br><br><br><br><p><b>0.0</b>START/FINISH ARCH</p><br><p><b>0.0</b> Turn left onto Hanover St.</p><br><p><b>0.4 </b> Turn left onto Page Mill Road *CAUTION – BUSY INTERSECTION* </p><br><p><b>1.3</b>Turn right onto Junipero Serra Blvd</p><br><p><b>3.7</b>Turn right onto Santa Cruz AveStraight across Sand Hill Road continue on Santa Cruz Ave *CAUTION - BUSY INTERSECTION*</p><br><p><b>4.1</b>Slight left onto Alameda/Alameda De Las Pulgas *CAUTION - WATCH FOR TRAFFIC CONTINUING STRAIGHT ONTO SANTA CRUZ AVE* Continue northwest on Alameda/Alameda De Las Pulgas</p><br><p><b>6.5</b>Turn left onto Woodside Road *CAUTION - BUSY INTERSECTION* Continue southwest on Woodside Road</p><br><p><b>8.5</b>Turn right onto Canada Road Continue northwest of Canada Road</p><br><p><b>11.6</b>Continue past Rest Stop.</p><br><p><b>13.6</b>TURN AROUND AT PULGAS WATER TEMPLE
 *CAUTION MAKING U-TURN ACROSS CANADA ROAD*

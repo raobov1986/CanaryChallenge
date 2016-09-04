@@ -2,6 +2,7 @@ package com.gari.canarychallenge.contentefragment;
 
 
 import android.Manifest;
+import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Build;
@@ -12,6 +13,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,6 +21,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.telephony.SmsManager;
+import android.widget.Toast;
+
 import com.gari.canarychallenge.R;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -83,7 +87,8 @@ public class SupportFragment extends Fragment {
                 String description=description_edittext.getText().toString();
                 String message="Name:"+name+"\n"+"Rider PhoneNumber:"+phone_number+"\n"+"Contact Details:"+description+"\n"+"Location "+location_data;
                 String send_phonenumber="6503880495";
-                sendSms(send_phonenumber,message);
+//                sendSms(send_phonenumber,message);
+                showalert(send_phonenumber,message);
 
             }
         });
@@ -108,6 +113,39 @@ public class SupportFragment extends Fragment {
         }
     }
 
+public  void showalert(final String phonenumber, final String message){
+
+
+
+    AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getActivity());
+    alertDialogBuilder.setMessage("Are you sure,You wanted to submit request help?");
+
+    alertDialogBuilder.setPositiveButton("Agree", new DialogInterface.OnClickListener() {
+        @Override
+        public void onClick(DialogInterface arg0, int arg1) {
+
+            sendSms(phonenumber,message);
+        }
+    });
+
+    alertDialogBuilder.setNegativeButton("Cancel",new DialogInterface.OnClickListener() {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+
+            dialog.cancel();
+
+        }
+    });
+
+    AlertDialog alertDialog = alertDialogBuilder.create();
+    alertDialog.show();
+
+
+
+}
+
+
+
     public void sendSms(String edt_phoneNo,String message)
     {
         Log.d("Phone Number",edt_phoneNo);
@@ -125,12 +163,7 @@ public class SupportFragment extends Fragment {
             SmsManager sm = SmsManager.getDefault();
             sm.sendTextMessage(edt_phoneNo, null, PINString, null, null);
 
-            Snackbar.make(contenteview, "Your sms has sent successfully!", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show();
-//            Intent myIntent = new Intent(SmsActivity.this,MapsActivity.class);
-//            myIntent.putExtra("verficationCode", PINString);
-//            myIntent.putExtra("phoneNo", edt_phoneNo);
-//            SmsActivity.this.startActivity(myIntent);
+            resultalert();
 
         } catch (Exception ex) {
 //            Toast.makeText(SmsActivity.this, "Your sms has failed...",
@@ -143,6 +176,34 @@ public class SupportFragment extends Fragment {
             ex.printStackTrace();
 
         }
+
+
+    }
+
+
+
+
+    public  void resultalert(){
+
+
+
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getActivity());
+        alertDialogBuilder.setMessage("Your request have sent successfully!");
+
+
+
+        alertDialogBuilder.setNegativeButton("Ok",new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                dialog.cancel();
+
+            }
+        });
+
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.show();
+
 
 
     }
